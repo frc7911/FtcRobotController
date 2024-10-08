@@ -18,7 +18,7 @@ public class ScrapBot2 extends LinearOpMode {
     private Servo servo1;
     private Servo servo2;
     private Servo servo3;
-    private Limelight3A EthernetDevice;
+
 
     /**
      * This OpMode offers Tank Drive style TeleOp control for a direct drive robot.
@@ -35,7 +35,7 @@ public class ScrapBot2 extends LinearOpMode {
         servo1 = hardwareMap.get(Servo.class, "servo 1");
         servo2 = hardwareMap.get(Servo.class, "servo 2");
         servo3 = hardwareMap.get(Servo.class, "servo 3");
-        EthernetDevice = hardwareMap.get(Limelight3A.class, "Ethernet Device");
+
 
         // Reverse one of the drive motors.
         // You will have to determine which motor to reverse for your robot.
@@ -67,7 +67,7 @@ public class ScrapBot2 extends LinearOpMode {
             telemetry.addData("Right Pow", rightMotor.getPower());
             telemetry.update();
             ((DcMotorEx) Lift).setVelocity(Lift.getPower(), AngleUnit.DEGREES);
-            EthernetDevice.updatePythonInputs(1, 2, 3, 4, 5, 6, 7, 8);
+
         }
     }
 }
