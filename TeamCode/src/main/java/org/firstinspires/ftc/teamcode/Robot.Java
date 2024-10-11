@@ -59,6 +59,9 @@ public class ScrapBot2 extends LinearOpMode {
                 Lift.setDirection(DcMotor.Direction.FORWARD);
                 Lift.setPower(-gamepad1.left_trigger);
                 servo1.setDirection(Servo.Direction.REVERSE);
+
+                // Try setPower instead of setPosition                      -Vincent Scrapcat Robotics
+
                 servo1.setPosition(gamepad1.left_stick_x);
                 servo2.setPosition(gamepad1.touchpad_finger_1_x);
                 servo3.setPosition(gamepad1.touchpad_finger_1_y);
